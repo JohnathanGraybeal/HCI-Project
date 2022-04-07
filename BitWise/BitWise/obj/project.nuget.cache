@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "87RQ6ouU1k56AUCDHMOdTFGuoQbi0ARt3diSHUq37ZhPrBVTtBxkbmkFAoqTgjbJ+QWHc/yNfBaCEhcifEX4iQ==",
+  "dgSpecHash": "rEa0lqhayD4mW0OwkcWE/u8xLbE+Co0lRbpuoxXEaCaO7ud35YqeLbR8HJEMwRCzwQFRTTHMEU0musncHD3t9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj",
+  "projectFilePath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Johnathan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Johnathan\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

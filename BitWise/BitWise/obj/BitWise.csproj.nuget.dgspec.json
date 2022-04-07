@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj": {}
+    "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj": {
+    "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj",
+        "projectUniqueName": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
         "projectName": "BitWise",
-        "projectPath": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj",
+        "projectPath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
         "packagesPath": "C:\\Users\\Johnathan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\obj\\",
+        "outputPath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Johnathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,12 @@
               "version": "[6.0.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
             },

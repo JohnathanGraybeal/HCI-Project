@@ -9568,6 +9568,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.3",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.3",
       "Microsoft.EntityFrameworkCore >= 6.0.3",
+      "Microsoft.EntityFrameworkCore.Design >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.2",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.3",
@@ -9580,11 +9581,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj",
+      "projectUniqueName": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
       "projectName": "BitWise",
-      "projectPath": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\BitWise.csproj",
+      "projectPath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
       "packagesPath": "C:\\Users\\Johnathan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Johnathan\\Source\\Repos\\HCI-Project\\BitWise\\BitWise\\obj\\",
+      "outputPath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Johnathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9622,6 +9623,12 @@
             "version": "[6.0.3, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.3, )"
           },
