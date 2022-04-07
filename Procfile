@@ -1,1 +1,1 @@
-release: cd BitWise/BitWise && update-database
+release: cd BitWise/BitWise && dotnet ef database update
