@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using BitWise.Data;
 using BitWise.Areas.Identity.Data;
 using BitWise.Services;
+using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,7 +41,8 @@ builder.Services.AddDbContext<BitWiseContext>(options =>
     .AddEntityFrameworkStores<BitWiseContext>();
 
 
-
+builder.Services.AddDataProtection()
+                .PersistKeysToDbContext<BitWiseContext>();
 
 
 var app = builder.Build();
@@ -62,6 +64,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 
 

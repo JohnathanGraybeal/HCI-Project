@@ -522,3 +522,7 @@ C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\obj\Debug\net
 C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\obj\Debug\net6.0\BitWise.pdb
 C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\obj\Debug\net6.0\BitWise.genruntimeconfig.cache
 C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\obj\Debug\net6.0\ref\BitWise.dll
+C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\bin\Debug\net6.0\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\bin\Debug\net6.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\bin\Debug\net6.0\Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.dll
+C:\Users\Johnathan\Documents\Repos\HCI-Project-PRD\BitWise\BitWise\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

@@ -1,12 +1,13 @@
 ﻿using BitWise.Areas.Identity.Data;
 using BitWise.Models.Entities;
+using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BitWise.Data;
 
-public class BitWiseContext : IdentityDbContext<BitWiseUser>
+public class BitWiseContext : IdentityDbContext<BitWiseUser>, IDataProtectionKeyContext
 {
     public BitWiseContext(DbContextOptions<BitWiseContext> options)
         : base(options)
@@ -22,5 +23,5 @@ public class BitWiseContext : IdentityDbContext<BitWiseUser>
     }
 
     public DbSet<Trophy> Trophies { get; set; }
-
+    public DbSet<DataProtectionKey> DataProtectionKeys { get; set; } = null!;
 }
