@@ -13,7 +13,7 @@ namespace BitWise.Migrations
 {
     [DbContext(typeof(BitWiseContext))]
     [Migration("20220407052324_data-protection")]
-    partial class dataprotection
+    partial class Dataprotection
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

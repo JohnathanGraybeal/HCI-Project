@@ -19,6 +19,7 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAchievementsRepo, AchievementsRepo>();
+builder.Services.AddScoped<ICourseRepo, CourseRepo>();
 string? connection;
 
 if (builder.Environment.IsDevelopment())
@@ -39,6 +40,9 @@ builder.Services.AddDbContext<BitWiseContext>(options =>
         options.User.RequireUniqueEmail = true;
         })
     .AddEntityFrameworkStores<BitWiseContext>();
+
+builder.Services.AddDbContext<CoursesDbContext>(options =>
+    options.UseNpgsql(connection));
 
 
 builder.Services.AddDataProtection()

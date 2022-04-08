@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BitWise.Migrations
 {
-    public partial class dataprotection : Migration
+    public partial class Dataprotection : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

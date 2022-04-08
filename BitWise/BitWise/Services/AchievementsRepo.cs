@@ -6,7 +6,7 @@ namespace BitWise.Services
 {
     public class AchievementsRepo : IAchievementsRepo
     {
-        private BitWiseContext _db;
+        private readonly BitWiseContext _db;
 
         public AchievementsRepo(BitWiseContext db)
         {
