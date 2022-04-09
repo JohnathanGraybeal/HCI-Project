@@ -3,6 +3,7 @@ using System;
 using BitWise.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BitWise.Migrations
 {
     [DbContext(typeof(BitWiseContext))]
-    partial class BitWiseContextModelSnapshot : ModelSnapshot
+    [Migration("20220409153201_added_rarity")]
+    partial class added_rarity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,7 +97,6 @@ namespace BitWise.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BitWiseUserId")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateOnly>("DateEarned")
@@ -276,9 +277,7 @@ namespace BitWise.Migrations
                 {
                     b.HasOne("BitWise.Areas.Identity.Data.BitWiseUser", "BitWiseUser")
                         .WithMany("Trophies")
-                        .HasForeignKey("BitWiseUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BitWiseUserId");
 
                     b.Navigation("BitWiseUser");
                 });

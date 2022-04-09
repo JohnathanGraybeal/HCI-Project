@@ -19,6 +19,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using BitWise.Services;
+using BitWise.Models.Entities;
 
 namespace BitWise.Areas.Identity.Pages.Account
 {
@@ -30,13 +32,15 @@ namespace BitWise.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<BitWiseUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IAchievementsRepo _achievementRepo;
 
         public RegisterModel(
             UserManager<BitWiseUser> userManager,
             IUserStore<BitWiseUser> userStore,
             SignInManager<BitWiseUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IAchievementsRepo achievementsRepo)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +48,7 @@ namespace BitWise.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _achievementRepo = achievementsRepo;
         }
 
         /// <summary>
@@ -117,13 +122,29 @@ namespace BitWise.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                await _emailStore.SetEmailConfirmedAsync(user, true, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
+
+                   
                     var userId = await _userManager.GetUserIdAsync(user);
+                    var today = DateOnly.FromDateTime(DateTime.Now);
+
+                    var trophy = new Trophy
+                    {
+                        Name = "Started your journey",
+                        Description = "Congrats you've taken the first step to learn how to code",
+                        DateEarned = today,
+                        Rarity = Models.TrophyRarity.Bronze,
+                        BitWiseUser = user,
+                        BitWiseUserId = userId,
+
+                    };
+                    await _achievementRepo.CreateAsync(trophy);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
