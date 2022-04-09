@@ -17,17 +17,21 @@ namespace BitWise.Controllers
         // GET: AchievementsController
         public async Task<ActionResult<IEnumerable<Trophy>>> Index()
         {
+            
             var achievements = await _achievements.ReadAllAsync();
             ClaimsPrincipal currentUser = this.User;
-            var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
-            if (currentUserID == null)
+            string currentUserId;
+            if (HttpContext.User.Identity.IsAuthenticated == false)
             {
                 ViewData["SignedIn"] = false;
                 return View();
             }
-           var  userAchievements = achievements.Where(a => a.BitWiseUser.Id == currentUserID);
-
-            return View(userAchievements);
+                currentUserId = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+                var userAchievements = achievements.Where(a => a.BitWiseUserId == currentUserId);
+                ViewData["SignedIn"] = true;
+                return View(userAchievements);
+            
+            
         }
 
 

@@ -48,7 +48,7 @@ namespace BitWise.Services
                 toUpdate.DateEarned = trophy.DateEarned;
                 toUpdate.Description = trophy.Description;
                 toUpdate.Name = trophy.Name;
-                toUpdate.Image = trophy.Image;
+                toUpdate.Rarity = trophy.Rarity;
 
 
                 await _db.SaveChangesAsync();
