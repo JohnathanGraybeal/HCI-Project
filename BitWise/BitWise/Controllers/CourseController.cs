@@ -17,9 +17,9 @@ namespace BitWise.Controllers
 
         public IActionResult Index()
         {
-            var model = _db.ReadCourses();
+            //var model = _db.ReadCourses();
 
-            return View(model);
+            return View();
         }
 
     }

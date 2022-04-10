@@ -6,7 +6,7 @@
 
         public string CourseNames { get; set; } = "";
 
-        public ICollection<CourseTopics> CourseTopics { get; set; } = new List<CourseTopics>();
+        public ICollection<CourseTopics>? CourseTopics { get; set; } = new List<CourseTopics>();
 
     }
 }

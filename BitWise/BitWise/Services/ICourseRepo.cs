@@ -9,7 +9,7 @@ namespace BitWise.Services
         ICollection<CourseTopics> ReadCourseTopics();
         ICollection<TopicDescription> ReadTopicDescriptions();
         ICollection<TopicImage> ReadTopicImages();
-
+        void CreateTestEntries();
         CourseTopics? Read(int courseId);
        
 

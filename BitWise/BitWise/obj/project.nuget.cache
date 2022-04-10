@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1NMCEZJF69kweQb63yWKQz6cgNDsj/k0kEbGWYyxanFvdMsDD97EAz6So5eDQDmPuiM79wCim2wq9K7I6VQgIg==",
+  "dgSpecHash": "PZcoM4FqCyQMVgvqIj8b4jZe5Tjxl66eOYzd9lBl4QEhmAXCturMRwTzvcWtaNZdTfEbN22vqXKmwryAwKIxzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\quite\\Documents\\GitHub\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
+  "projectFilePath": "D:\\GitHubRepos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\quite\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\quite\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
