@@ -9723,26 +9723,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Johnathan\\.nuget\\packages\\": {}
+    "C:\\Users\\quite\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
+      "projectUniqueName": "D:\\GitHubRepos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
       "projectName": "BitWise",
-      "projectPath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
-      "packagesPath": "C:\\Users\\Johnathan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Johnathan\\Documents\\Repos\\HCI-Project-PRD\\BitWise\\BitWise\\obj\\",
+      "projectPath": "D:\\GitHubRepos\\HCI-Project-PRD\\BitWise\\BitWise\\BitWise.csproj",
+      "packagesPath": "C:\\Users\\quite\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHubRepos\\HCI-Project-PRD\\BitWise\\BitWise\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Johnathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\quite\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "c:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

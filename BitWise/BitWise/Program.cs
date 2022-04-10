@@ -20,6 +20,7 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAchievementsRepo, AchievementsRepo>();
+builder.Services.AddScoped<ICourseRepo, CourseRepo>();
 string? connection;
 
 if (builder.Environment.IsDevelopment())
@@ -42,10 +43,15 @@ builder.Services.AddDbContext<BitWiseContext>(options =>
         })
     .AddEntityFrameworkStores<BitWiseContext>();
 
+builder.Services.AddDbContext<CoursesDbContext>(options =>
+    options.UseNpgsql(connection));
+
 
 builder.Services.AddDataProtection()
                 .PersistKeysToDbContext<BitWiseContext>();
 
+builder.Services.AddDataProtection()
+                .PersistKeysToDbContext<CoursesDbContext>();
 
 var app = builder.Build();
 

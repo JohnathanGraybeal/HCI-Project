@@ -24,4 +24,6 @@ public class BitWiseContext : IdentityDbContext<BitWiseUser>, IDataProtectionKey
 
     public DbSet<Trophy> Trophies { get; set; }
     public DbSet<DataProtectionKey> DataProtectionKeys { get; set; } = null!;
+    public DbSet<BitWise.Models.Entities.Course> Course { get; set; }
+    public DbSet<BitWise.Models.Entities.CourseViewModel> CourseViewModel { get; set; }
 }

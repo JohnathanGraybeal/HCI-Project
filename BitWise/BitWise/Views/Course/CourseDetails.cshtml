@@ -1,0 +1,50 @@
+﻿@model BitWise.Models.Entities.CourseViewModel
+
+@{
+    ViewData["Title"] = "CourseDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.CourseName</h1>
+ <br />
+
+@foreach (var topic in Model.CourseTopics)
+{
+    <h3>@topic.Topic</h3>
+    <br />
+
+    @foreach (var desc in Model.TopicDescriptions)
+    {
+        foreach (var d in desc)
+        {
+            if (d.TopicNumber == topic.Id)
+            {
+                <p style="display:block; margin-left:auto; margin-right: auto;line-break:normal;width:90%;">@d.Description</p>
+                <br />
+            }
+
+        }
+
+    }
+
+    @foreach (var image in Model.TopicImages)
+    {
+
+        foreach (var im in image)
+        {
+            if (im.TopicNumber == topic.Id)
+            {
+                <br />
+                <img src="@im.ImageURL" style="width:50%;height:5%; border: 5px solid #555;border-color:white;display:block; margin-left:auto; margin-right: auto;"/>
+                <br />
+            }
+        }
+
+    }
+
+
+}
+
+<div>
+    <a asp-action="Index">Back to Course List</a>
+</div>

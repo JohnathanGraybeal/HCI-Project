@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BitWise.Models.Entities.Course>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Course List</h1>
+
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseNames)
+            </td>
+            <td>
+
+                <a asp-action="CourseDetails" asp-route-id="@item.CourseId">Begin Lession</a> 
+           
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
